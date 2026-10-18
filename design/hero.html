@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Indie HQ hero</title>
+<style>
+:root{--bg:#07090d;--line:#1d2533;--text:#e8edf5;--mute:#8b96a8;--green:#2ee6a6;--blue:#5aa9ff;--amber:#ffb547}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:640px;overflow:hidden;font-family:-apple-system,"SF Pro Display","Helvetica Neue",sans-serif;color:var(--text)}
+body{background:radial-gradient(700px 420px at 78% 40%,rgba(90,169,255,.22),transparent 65%),radial-gradient(600px 380px at 10% 100%,rgba(46,230,166,.16),transparent 60%),var(--bg);position:relative}
+body:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(ellipse at 60% 50%,#000 30%,transparent 75%)}
+.left{position:absolute;left:64px;top:70px;width:480px}
+.logo{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:.2em;font-size:22px}
+.mark{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;color:#06110d;font-weight:900;font-size:20px;letter-spacing:0;box-shadow:0 0 40px rgba(46,230,166,.35)}
+h1{font-size:56px;line-height:1.04;font-weight:800;letter-spacing:-.025em;margin-top:34px}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--green),var(--blue));-webkit-background-clip:text;color:transparent}
+p{font-size:20px;line-height:1.45;color:var(--mute);margin-top:20px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chip{border:1px solid var(--line);background:rgba(14,18,25,.8);border-radius:999px;padding:8px 15px;font-size:15px;font-weight:650}
+.chip b{color:var(--green)}
+.tv{position:absolute;left:585px;top:92px;width:660px}
+.screen{border-radius:16px;padding:10px;background:#0b0d12;border:1px solid #2a3242;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.04) inset}
+.screen img{display:block;width:100%;border-radius:8px}
+.stand{width:130px;height:34px;margin:0 auto;background:linear-gradient(#1a2030,#0d1018);clip-path:polygon(30% 0,70% 0,100% 100%,0 100%)}
+.note{position:absolute;left:530px;top:400px;width:340px;background:rgba(28,33,45,.92);backdrop-filter:blur(10px);border:1px solid #2c3446;border-radius:20px;padding:14px 16px;display:flex;gap:12px;box-shadow:0 20px 50px rgba(0,0,0,.55)}
+.note .ic{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;color:#06110d;font-weight:900;font-size:14px;flex:none}
+.note b{font-size:15px}.note div div{font-size:14px;color:#c9d1dd;margin-top:2px;line-height:1.3}
+.note small{color:var(--mute);font-size:12px;margin-left:auto;align-self:flex-start}
+</style></head><body>
+<div class="left">
+  <div class="logo"><div class="mark">HQ</div>INDIE HQ</div>
+  <h1>Your whole app business on <em>one screen.</em></h1>
+  <p>Sales, reviews, App Review status, uptime and cloud cost. Self-host it on a Steam Deck, a Pi or a Mac mini and put it on your TV.</p>
+  <div class="chips"><span class="chip"><b>MIT</b> open source</span><span class="chip">Self-hosted</span><span class="chip">TV mode</span><span class="chip">Push alerts</span></div>
+</div>
+<div class="tv"><div class="screen"><img src="../media/dashboard.png" alt=""></div><div class="stand"></div></div>
+<div class="note"><div class="ic">HQ</div><div><b>App Review approved 🎉</b><div>Pocket Ledger 1.4 is ready to release.</div></div><small>now</small></div>
+</body></html>

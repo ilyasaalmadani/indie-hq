@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Indie HQ flow</title>
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--line:#1d2533;--text:#e8edf5;--mute:#8b96a8;--green:#2ee6a6;--blue:#5aa9ff;--violet:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1600px;height:640px;overflow:hidden;background:var(--bg);color:var(--text);font-family:-apple-system,"SF Pro Display","Helvetica Neue",sans-serif}
+body{display:grid;grid-template-columns:1fr 120px 1.05fr 120px 1fr;align-items:center;padding:56px 64px;background:radial-gradient(600px 400px at 50% 50%,rgba(46,230,166,.12),transparent 70%),var(--bg)}
+.col h3{font-size:15px;letter-spacing:.16em;color:var(--mute);text-transform:uppercase;margin-bottom:16px;font-weight:700}
+.item{display:flex;align-items:center;gap:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:13px 16px;margin-bottom:12px;font-size:19px;font-weight:600}
+.item i{font-style:normal;width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-size:18px;background:#161c28}
+.item span{color:var(--mute);font-weight:500;font-size:15px;margin-left:auto}
+.arrow{height:4px;background:linear-gradient(90deg,transparent,var(--green));position:relative;margin:0 10px}
+.arrow:after{content:"";position:absolute;right:-2px;top:-8px;border-left:16px solid var(--green);border-top:10px solid transparent;border-bottom:10px solid transparent}
+.core{border-radius:26px;padding:30px;background:linear-gradient(180deg,#121a26,#0c1119);border:1px solid #2a3a4a;box-shadow:0 0 60px rgba(46,230,166,.18);text-align:center}
+.mark{width:72px;height:72px;margin:0 auto;border-radius:18px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;color:#06110d;font-weight:900;font-size:30px}
+.core h2{font-size:30px;letter-spacing:.14em;margin-top:18px}
+.core p{color:var(--mute);font-size:17px;margin-top:8px;line-height:1.4}
+.boxes{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:18px}
+.boxes b{font-size:14px;border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-weight:600;background:#0e1219}
+.lock{margin-top:16px;font-size:15px;color:var(--green);font-weight:650}
+</style></head><body>
+<div class="col"><h3>Your data</h3>
+  <div class="item"><i>🍎</i>App Store Connect<span>sales · reviews</span></div>
+  <div class="item"><i>▶</i>Google Play<span>installs · ratings</span></div>
+  <div class="item"><i>$</i>Stripe<span>MRR · payouts</span></div>
+  <div class="item"><i>⏱</i>Your websites<span>uptime</span></div>
+  <div class="item"><i>☁</i>Cloud bills<span>daily cost</span></div>
+</div>
+<div class="arrow"></div>
+<div class="core"><div class="mark">HQ</div><h2>INDIE HQ</h2><p>One small service on a box you own.<br>Polls your APIs, keeps history, sends alerts.</p>
+  <div class="boxes"><b>Steam Deck</b><b>Raspberry Pi</b><b>Mac mini</b><b>Any VPS</b><b>Docker</b></div>
+  <div class="lock">🔒 API keys never leave your box</div></div>
+<div class="arrow"></div>
+<div class="col"><h3>Your screens</h3>
+  <div class="item"><i>📺</i>TV / monitor<span>kiosk mode</span></div>
+  <div class="item"><i>🌐</i>Any browser<span>live board</span></div>
+  <div class="item"><i>🔔</i>Phone alerts<span>ntfy · push</span></div>
+  <div class="item"><i>📨</i>Weekly report<span>Monday 7:00</span></div>
+  <div class="item"><i>⌨</i>Terminal view<span>for SSH lovers</span></div>
+</div>
+</body></html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Indie HQ dashboard (demo data)</title>
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#121826;--line:#1d2533;--text:#e8edf5;--mute:#7d8899;--green:#2ee6a6;--amber:#ffb547;--red:#ff3b5c;--blue:#5aa9ff;--violet:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;background:var(--bg);color:var(--text);font-family:-apple-system,"SF Pro Display","Helvetica Neue",sans-serif;overflow:hidden}
+body{padding:36px 44px;display:grid;grid-template-rows:auto auto 1fr auto;gap:24px;
+  background:radial-gradient(1200px 600px at 85% -10%,rgba(90,169,255,.10),transparent 60%),radial-gradient(900px 500px at 0% 110%,rgba(46,230,166,.08),transparent 60%),var(--bg)}
+.mono{font-family:"SF Mono",ui-monospace,Menlo,monospace}
+header{display:flex;align-items:center;gap:22px}
+.logo{display:flex;align-items:center;gap:14px;font-weight:800;letter-spacing:.18em;font-size:26px}
+.mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--green),var(--blue));display:grid;place-items:center;color:#06110d;font-size:22px;font-weight:900;letter-spacing:0}
+.sub{color:var(--mute);font-size:15px;letter-spacing:.12em;margin-top:3px;font-weight:500}
+.spacer{flex:1}
+.pill{display:flex;align-items:center;gap:10px;padding:10px 18px;border:1px solid var(--line);border-radius:999px;background:var(--panel);font-size:17px;font-weight:600}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green)}
+.clock{font-size:44px;font-weight:300;letter-spacing:.04em}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.card{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:20px;padding:22px 24px}
+.k-label{color:var(--mute);font-size:15px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+.k-val{font-size:50px;font-weight:700;margin-top:10px;letter-spacing:-.01em}
+.k-delta{font-size:17px;margin-top:6px;font-weight:600}
+.up{color:var(--green)}.warn{color:var(--amber)}.mute{color:var(--mute)}
+.main{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:20px;min-height:0}
+.title{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px}
+.title h2{font-size:18px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:700}
+.title span{font-size:15px;color:var(--mute)}
+.app{display:flex;align-items:center;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.app:first-of-type{border-top:0}
+.icon{width:52px;height:52px;border-radius:13px;display:grid;place-items:center;font-size:26px;flex:none}
+.app-name{font-size:21px;font-weight:650}
+.app-meta{font-size:15px;color:var(--mute);margin-top:3px}
+.tag{margin-left:auto;padding:7px 14px;border-radius:999px;font-size:15px;font-weight:700;white-space:nowrap}
+.t-green{background:rgba(46,230,166,.12);color:var(--green)}
+.t-amber{background:rgba(255,181,71,.12);color:var(--amber)}
+.t-blue{background:rgba(90,169,255,.12);color:var(--blue)}
+.t-violet{background:rgba(167,139,250,.14);color:var(--violet)}
+.chart{margin-top:6px}
+.review{padding:14px 0;border-top:1px solid var(--line)}
+.review:first-of-type{border-top:0}
+.stars{color:var(--amber);font-size:17px;letter-spacing:2px}
+.review p{font-size:18px;margin-top:6px;line-height:1.35}
+.review small{display:block;color:var(--mute);font-size:14px;margin-top:6px}
+.ev{display:grid;grid-template-columns:70px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-size:18px;line-height:1.3}
+.ev:first-of-type{border-top:0}
+.ev time{color:var(--mute);font-size:15px;padding-top:2px}
+.ev b{font-weight:650}
+footer{display:flex;gap:26px;color:var(--mute);font-size:15px;align-items:center}
+footer .sep{opacity:.4}
+.badge{border:1px dashed var(--line);border-radius:8px;padding:4px 10px;font-size:13px;letter-spacing:.08em}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><div class="mark">HQ</div><div>INDIE HQ<div class="sub">YOUR APP BUSINESS · ONE SCREEN</div></div></div>
+  <div class="spacer"></div>
+  <div class="pill"><span class="dot"></span>All systems normal</div>
+  <div class="pill mono">4 apps · 3 sites · 2 stores</div>
+  <div class="clock mono">09:41</div>
+</header>
+
+<section class="kpis">
+  <div class="card"><div class="k-label">Revenue today</div><div class="k-val">$412</div><div class="k-delta up">▲ 18% vs last Monday</div></div>
+  <div class="card"><div class="k-label">Downloads</div><div class="k-val">1,284</div><div class="k-delta up">▲ 9% · App Store + Play</div></div>
+  <div class="card"><div class="k-label">New reviews</div><div class="k-val">23 <span style="font-size:30px;color:var(--amber)">★ 4.8</span></div><div class="k-delta mute">2 need a reply</div></div>
+  <div class="card"><div class="k-label">Uptime · 30 days</div><div class="k-val">99.98%</div><div class="k-delta up">api 142 ms · web 88 ms</div></div>
+  <div class="card"><div class="k-label">Cloud cost</div><div class="k-val">$2.31<span style="font-size:24px;color:var(--mute)">/day</span></div><div class="k-delta warn">▲ R2 egress +34%</div></div>
+</section>
+
+<section class="main">
+  <div class="card" style="display:flex;flex-direction:column">
+    <div class="title"><h2>Apps</h2><span>live from App Store Connect &amp; Play Console</span></div>
+    <div class="app"><div class="icon" style="background:linear-gradient(135deg,#ffb547,#ff6b3d)">🦉</div><div><div class="app-name">Habit Owl</div><div class="app-meta">iOS · v2.3 · 612 downloads today</div></div><span class="tag t-green">Ready for Sale</span></div>
+    <div class="app"><div class="icon" style="background:linear-gradient(135deg,#2ee6a6,#0fa37f)">📒</div><div><div class="app-name">Pocket Ledger</div><div class="app-meta">iOS + Mac · v1.4 · approved 7 min ago</div></div><span class="tag t-violet">Approved 🎉</span></div>
+    <div class="app"><div class="icon" style="background:linear-gradient(135deg,#5aa9ff,#3b5bff)">✨</div><div><div class="app-name">Lumen Notes</div><div class="app-meta">Android · v3.0 · staged rollout 20%</div></div><span class="tag t-blue">In Review</span></div>
+    <div class="app"><div class="icon" style="background:linear-gradient(135deg,#a78bfa,#6d4bd8)">🧭</div><div><div class="app-name">Trailmark</div><div class="app-meta">Web · Stripe · 41 trials this week</div></div><span class="tag t-green">Up · 142 ms</span></div>
+    <div class="title" style="margin-top:18px"><h2>Revenue · 30 days</h2><span class="mono">$9,870</span></div>
+    <svg class="chart" viewBox="0 0 640 170" width="100%" height="170">
+      <defs><linearGradient id="g" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#2ee6a6" stop-opacity=".45"/><stop offset="1" stop-color="#2ee6a6" stop-opacity="0"/></linearGradient></defs>
+      <g stroke="#1d2533" stroke-width="1"><line x1="0" y1="42" x2="640" y2="42"/><line x1="0" y1="92" x2="640" y2="92"/><line x1="0" y1="142" x2="640" y2="142"/></g>
+      <path d="M0,130 L22,126 L44,128 L66,120 L88,122 L110,112 L132,116 L154,104 L176,108 L198,98 L220,102 L242,94 L264,96 L286,88 L308,92 L330,80 L352,84 L374,76 L396,82 L418,70 L440,74 L462,62 L484,68 L506,56 L528,60 L550,48 L572,52 L594,40 L616,44 L640,30 L640,170 L0,170 Z" fill="url(#g)"/>
+      <path d="M0,130 L22,126 L44,128 L66,120 L88,122 L110,112 L132,116 L154,104 L176,108 L198,98 L220,102 L242,94 L264,96 L286,88 L308,92 L330,80 L352,84 L374,76 L396,82 L418,70 L440,74 L462,62 L484,68 L506,56 L528,60 L550,48 L572,52 L594,40 L616,44 L640,30" fill="none" stroke="#2ee6a6" stroke-width="3" stroke-linejoin="round"/>
+      <circle cx="640" cy="30" r="6" fill="#2ee6a6"/>
+    </svg>
+  </div>
+
+  <div class="card">
+    <div class="title"><h2>Latest reviews</h2><span>App Store · Play</span></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Finally a habit app that doesn't nag me. The widgets are perfect."</p><small>Habit Owl · 🇺🇸 United States · 4 min ago</small></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Switched from a spreadsheet. Pocket Ledger syncs instantly between my Mac and iPhone."</p><small>Pocket Ledger · 🇬🇧 United Kingdom · 21 min ago</small></div>
+    <div class="review"><div class="stars">★★★☆☆</div><p>"Love it, but please add a dark theme for the editor."</p><small>Lumen Notes · 🇩🇪 Germany · 1 h ago · <span style="color:var(--amber)">needs reply</span></small></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Tiny team, huge polish. Support answered in an hour."</p><small>Trailmark · 🇯🇵 Japan · 2 h ago</small></div>
+  </div>
+
+  <div class="card">
+    <div class="title"><h2>Event feed</h2><span>pushed to your phone</span></div>
+    <div class="ev"><time class="mono">09:34</time><div><b>App Review approved</b> Pocket Ledger 1.4 · ready to release</div></div>
+    <div class="ev"><time class="mono">09:12</time><div><b>New subscriber</b> Habit Owl Pro yearly · $29.99</div></div>
+    <div class="ev"><time class="mono">08:47</time><div><b>api.trailmark.app recovered</b> after 2 min · alert sent</div></div>
+    <div class="ev"><time class="mono">08:05</time><div><b>Stripe payout</b> $1,204.50 on its way</div></div>
+    <div class="ev"><time class="mono">07:30</time><div><b>Weekly CEO report</b> revenue +12%, churn 1.9%</div></div>
+    <div class="ev"><time class="mono">06:58</time><div><b>Cost alert</b> R2 egress above budget</div></div>
+    <div class="ev"><time class="mono">06:20</time><div><b>Rollout</b> Lumen Notes 3.0 now at 20% on Play</div></div>
+    <div class="ev"><time class="mono">05:42</time><div><b>Trial converted</b> Trailmark Team plan · $12/mo</div></div>
+    <div class="ev"><time class="mono">00:00</time><div><b>Backups done</b> database + repos · 2.1 GB</div></div>
+  </div>
+</section>
+
+<footer>
+  <span>⚡ Self-hosted on a Steam Deck</span><span class="sep">·</span><span>Open source · MIT</span><span class="sep">·</span><span>Your keys stay on your box</span>
+  <div class="spacer"></div><span class="badge mono">DEMO DATA</span>
+</footer>
+</body>
+</html>
